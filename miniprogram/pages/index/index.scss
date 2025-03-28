@@ -1,1 +1,38 @@
-/**index.wxss**/
+/* 自定义导航栏 */
+.custom-navbar {
+  height: 88rpx;
+  padding: 0 32rpx;
+  display: flex;
+  align-items: center;
+  background: #FFD700; /* 黄色背景 */
+  width: 100%; /* 让导航栏占满屏幕宽度 */
+  box-sizing: border-box; /* 防止外边距影响布局 */
+}
+
+/* 搜索框容器 */
+.search-container {
+  padding: 20rpx 32rpx;
+  background: #FFD700; /* 保持黄色背景 */
+  width: 100%;  /* 占满屏幕宽度 */
+  box-sizing: border-box;
+}
+
+.search-box {
+  height: 72rpx;
+  background: #ffffff;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 24rpx;
+}
+
+.search-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+}
+
+.search-placeholder {
+  font-size: 28rpx;
+  color: #999;
+}

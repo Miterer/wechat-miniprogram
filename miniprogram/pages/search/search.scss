@@ -1,0 +1,80 @@
+/* 搜索头部 */
+.search-header {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 32rpx;
+  background: #FFD700; /* 设置背景色为金黄色 */
+  margin-top: 88rpx; /* 保证搜索框不被刘海遮挡 */
+}
+
+/* 返回按钮 */
+.back-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx; /* 调整位置，使其距离左侧有间距 */
+}
+
+/* 搜索输入框 */
+.search-input {
+  flex: 1;
+  height: 72rpx;
+  background: #ffffff;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 24rpx;
+}
+
+/* 搜索图标 */
+.search-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+}
+
+/* 输入框样式 */
+.input {
+  flex: 1;
+  font-size: 28rpx;
+}
+
+.placeholder {
+  color: #999;
+}
+
+/* 搜索结果列表 */
+.search-result {
+  height: calc(100vh - 120rpx);
+  padding: 20rpx 32rpx;
+}
+
+.result-item {
+  display: flex;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.item-image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+  margin-right: 24rpx;
+}
+
+.item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.item-price {
+  font-size: 32rpx;
+  color: #f3514f;
+  font-weight: bold;
+}

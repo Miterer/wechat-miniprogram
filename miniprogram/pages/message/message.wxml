@@ -1,2 +1,29 @@
-<!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<view class="message-page">
+  <block wx:for="{{messageList}}" wx:key="id">
+    <view
+      class="message-item"
+      data-id="{{item.id}}"
+      bindtap="handleMessageTap"
+    >
+      <!-- 头像 -->
+      <image class="message-avatar" src="{{item.avatar}}" mode="aspectFill" />
+
+      <!-- 中间区域：标题 & 最后一条消息 -->
+      <view class="message-info">
+        <view class="message-title">{{item.title}}</view>
+        <view class="message-last">{{item.lastMsg}}</view>
+      </view>
+
+      <!-- 右侧时间 & 未读数 -->
+      <view class="message-extra">
+        <view class="message-time">{{item.time}}</view>
+        <view
+          class="message-badge"
+          wx:if="{{item.unreadCount > 0}}"
+        >
+        <text>{{item.unreadCount <= 99 ? item.unreadCount : '99+'}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

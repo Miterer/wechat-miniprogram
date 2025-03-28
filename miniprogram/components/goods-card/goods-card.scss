@@ -1,0 +1,80 @@
+/* components/goods-cards/goods-card.wxss */
+/* 商品卡片容器 */
+.goods_card_container {
+  width: 350rpx;
+  margin: 18rpx 10rpx;
+  background: #ffffff;
+  border-radius: 18rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+
+/* 商品图片 */
+.goods_img {
+  width: 100%;
+  height: 360rpx;
+  border-top-left-radius: 16rpx;
+  border-top-right-radius: 16rpx;
+}
+
+/* 商品信息区域 */
+.goods_item_info {
+  padding: 20rpx 24rpx;
+}
+
+/* 商品名称 */
+.goods_item_info_name {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 商品描述 */
+.goods_item_info_promo {
+  font-size: 24rpx;
+  color: #71797f;
+  margin-top: 12rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 价格与操作区域 */
+.goods_item_info_bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 24rpx;
+}
+
+/* 现价样式 */
+.goods_item_info_price {
+  flex: 1;
+  color: #f3514f;
+  font-weight: bold;
+}
+
+.price_symbol {
+  font-size: 24rpx;
+}
+
+.price_value {
+  font-size: 32rpx;
+}
+
+/* 原价样式 */
+.goods_item_info_origin_price {
+  flex: 1;
+  color: #999;
+  font-size: 24rpx;
+  text-decoration: line-through;
+  margin-left: 12rpx;
+}
+
+/* 购物车按钮 */
+.cart_icon {
+  width: 48rpx;
+  height: 48rpx;
+}

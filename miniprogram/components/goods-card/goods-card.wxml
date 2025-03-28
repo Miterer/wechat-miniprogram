@@ -1,0 +1,42 @@
+<!-- 商品卡片容器 -->
+<view class="goods_card_container" bindtap="navigateToDetail" data-id="{{goodItem.id}}">
+  <!-- 商品图片 -->
+  <image 
+    class="goods_img" 
+    src="{{goodItem.imageUrl}}" 
+    mode="widthFix" 
+  />
+
+  <!-- 商品信息 -->
+  <view class="goods_item_info">
+    <!-- 商品名称 -->
+    <text class="goods_item_info_name">{{goodItem.name}}</text>
+
+    <!-- 商品描述 -->
+    <text class="goods_item_info_promo">{{goodItem.description}}</text>
+
+    <!-- 价格与操作区域 -->
+    <view class="goods_item_info_bottom">
+      <!-- 现价 -->
+      <view class="goods_item_info_price">
+        <text class="price_symbol">¥</text>
+        <text class="price_value">{{goodItem.marketPrice}}</text>
+      </view>
+
+      <!-- 原价（可选） -->
+      <view class="goods_item_info_origin_price" wx:if="{{goodItem.originalPrice}}">
+        <text class="price_symbol">¥</text>
+        <text class="price_value">{{goodItem.originalPrice}}</text>
+      </view>
+
+      <!-- 加入购物车按钮 -->
+      <view class="goods_item_info_btn">
+        <image 
+          class="cart_icon" 
+          src="/assets/images/buybtn.png" 
+          mode="aspectFit" 
+        />
+      </view>
+    </view>
+  </view>
+</view>

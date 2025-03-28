@@ -1,0 +1,14 @@
+<view class="favorites-container">
+  <!-- 页面标题 -->
+  <view class="page-title">
+    <text class="title">我的收藏</text>
+  </view>
+
+  <!-- 如果没有收藏商品，显示提示 -->
+  <view wx:if="{{favoritesList.length === 0}}" class="no-favorites">
+    <text>您没有收藏的商品</text>
+  </view>
+
+  <!-- 使用 goods-list 组件展示收藏的商品 -->
+  <goods-list goodsList="{{favoritesList}}" title="收藏商品" />
+</view>

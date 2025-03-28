@@ -1,0 +1,6 @@
+<view class="nav-list">
+  <view wx:for="{{cateList}}" wx:key="id" class="nav-item" data-type="{{item.type}}" bindtap="navigateToCategory">
+    <image class="nav-img" src="{{item.icon}}" />
+    <text class="nav-text">{{item.name}}</text>
+  </view>
+</view>

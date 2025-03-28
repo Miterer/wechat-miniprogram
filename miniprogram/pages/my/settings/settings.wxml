@@ -1,0 +1,27 @@
+<view class="settings-container">
+  <!-- 个人资料部分 -->
+  <view class="profile-section">
+    <view class="avatar" bindtap="handleChangeAvatar">
+      <image class="avatar-image" src="{{userInfo.avatarUrl}}" />
+    </view>
+    <view class="info">
+      <text class="nickname" bindtap="handleChangeNickname">{{userInfo.nickname}}</text>
+      <text class="username">{{userInfo.username}}</text>
+      <text class="description">{{userInfo.description}}</text>
+    </view>
+  </view>
+
+  <!-- 认证信息 -->
+  <view class="authentication-section">
+    <text class="section-title">认证信息</text>
+    <view class="auth-info" bindtap="handleRealNameVerification">
+      <text class="auth-status">{{authentication}}</text>
+      <text class="auth-action">点击进行实名认证</text>
+    </view>
+  </view>
+
+  <!-- 退出登录 -->
+  <view class="logout-section">
+    <button class="logout-btn" bindtap="handleLogout">退出登录</button>
+  </view>
+</view>

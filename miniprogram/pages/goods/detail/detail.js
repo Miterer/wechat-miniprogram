@@ -1,66 +1,48 @@
-// pages/goods/detail/detail.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    goodsItem: {}
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
-
+    const goodsId = options.goodsId; // 获取商品ID
+    this.loadGoodsDetail(goodsId);
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
+  loadGoodsDetail(goodsId) {
+    // 模拟从数据库或后端获取商品详情数据，这里使用之前的goodsList来模拟数据
+    const goodsList = [
+      {
+        id: 1,
+        name: "小米14ultra",
+        type: "electronics",
+        marketPrice: 4999,
+        originalPrice: 6499,
+        description: "小米14ultra 99新，女生自用",
+        imageUrl: "/assets/images/phone_xiaomi14ultra.jpg",
+        viewCount: 1024,
+        wishCount: 230,
+        timeStamp: 1615287342000
+      },
+      {
+        id: 2,
+        name: "考研张宇高数18讲",
+        type: "books",
+        marketPrice: 149,
+        originalPrice: 199,
+        description: "考研数学复习资料",
+        imageUrl: "/assets/images/book_zhangyu18.jpg",
+        viewCount: 789,
+        wishCount: 120,
+        timeStamp: 1615288342000
+      }
+    ];
 
-  },
+    // 通过商品ID获取具体商品数据
+    const goodsItem = goodsList.find(item => item.id === parseInt(goodsId));
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+    // 设置商品数据到页面
+    this.setData({
+      goodsItem
+    });
   }
-})
+});

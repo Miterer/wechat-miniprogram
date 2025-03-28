@@ -1,0 +1,11 @@
+<view class="goods-list">
+  <block wx:for="{{goodsList}}" wx:key="id">
+    <view class="goods-item" data-id="{{item.id}}" bindtap="handleGoodsTap">
+      <image class="goods-img" src="{{item.imageUrl}}" mode="aspectFill" />
+      <view class="goods-info">
+        <text class="goods-name">{{item.name}}</text>
+        <text class="goods-price">¥{{item.marketPrice}}</text>
+      </view>
+    </view>
+  </block>
+</view>

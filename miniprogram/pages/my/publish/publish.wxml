@@ -1,0 +1,13 @@
+<view class="publish-container">
+  <view class="page-title">
+    <text class="title">我发布的商品</text>
+  </view>
+
+  <!-- 如果商品列表为空，显示提示 -->
+  <view wx:if="{{goodsList.length === 0}}" class="no-goods">
+    <text>你还没有发布商品</text>
+  </view>
+
+  <!-- 使用 goods-list 组件展示商品 -->
+  <goods-list goodsList="{{goodsList}}" />
+</view>

@@ -1,14 +1,11 @@
-# Windows
-[Dd]esktop.ini
-Thumbs.db
-$RECYCLE.BIN/
-
-# macOS
-.DS_Store
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-
-# Node.js
+# 忽略微信开发者工具生成的文件
+project.config.json
+miniprogram_npm/
 node_modules/
+*.log
+*.tmp
+
+# 忽略敏感信息
+app-private.json
+*.key
+*.pem

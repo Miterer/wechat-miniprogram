@@ -1,2 +1,18 @@
-<!--pages/goods/detail/detail.wxml-->
-<text>pages/goods/detail/detail.wxml</text>
+<view class="detail-container">
+  <image class="goods-img" src="{{goodsItem.imageUrl}}" mode="aspectFill" />
+
+  <view class="goods-info">
+    <text class="goods-name">{{goodsItem.name}}</text>
+    <view class="price-section">
+      <text class="price">¥{{goodsItem.marketPrice}}</text>
+      <text class="original-price" wx:if="{{goodsItem.originalPrice}}">¥{{goodsItem.originalPrice}}</text>
+    </view>
+    <text class="goods-description">{{goodsItem.description}}</text>
+  </view>
+
+  <!-- 商品互动 -->
+  <view class="interaction-section">
+    <text>浏览量: {{goodsItem.viewCount}}</text>
+    <text>想要人数: {{goodsItem.wishCount}}</text>
+  </view>
+</view>

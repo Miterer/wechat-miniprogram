@@ -1,0 +1,31 @@
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20rpx;
+  background-color: #FFD700; /* 主题色 */
+  border-radius: 18rpx;
+}
+
+.nav-item {
+  width: 22%;
+  /* 添加下面这行，让内容垂直排列且居中 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx;
+}
+
+.nav-img {
+  width: 66rpx;
+  height: 66rpx;
+}
+
+.nav-text {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #333;
+  /* 居中对齐 */
+  text-align: center;
+}

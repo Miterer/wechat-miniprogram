@@ -1,4 +1,11 @@
 {
   "usingComponents": {
-  }
+    "goods-list": "/components/goods-list/goods-list",
+    "entrance": "./entrance/entrance",
+    "banner": "./banner/banner"
+  },
+  "navigationStyle": "custom",  
+  "navigationBarTextStyle": "black",
+  
+  "navigationBarTitleText": "校园旧宝集"
 }

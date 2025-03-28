@@ -1,0 +1,13 @@
+<view class="buy-container">
+  <view class="page-title">
+    <text class="title">我买到的商品</text>
+  </view>
+
+  <!-- 如果买到的商品列表为空，显示提示 -->
+  <view wx:if="{{buyGoodsList.length === 0}}" class="no-goods">
+    <text>你还没有买到商品</text>
+  </view>
+
+  <!-- 使用 goods-list 组件展示买到的商品 -->
+  <goods-list goodsList="{{buyGoodsList}}" />
+</view>

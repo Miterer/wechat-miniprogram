@@ -1,1 +1,85 @@
-/* pages/message/message.wxss */
+.message-page {
+  background-color: #f8f8f8;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 0 0 60rpx 0; /* 底部留点空间, 视情况而定 */
+}
+
+/* 单条消息 */
+.message-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+/* 头像 */
+.message-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  background-color: #ffffff;
+}
+
+/* 中间标题 & 最后一条消息 */
+.message-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.message-title {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+
+.message-last {
+  font-size: 24rpx;
+  color: #888;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 80%;
+}
+
+/* 右侧时间 & 未读数 */
+.message-extra {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-left: 10rpx;
+}
+
+.message-time {
+  font-size: 22rpx;
+  color: #999;
+  margin-bottom: 8rpx;
+}
+
+/* 未读红点 */
+.message-extra {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8rpx;
+}
+
+.message-badge {
+  min-width: 40rpx;
+  height: 40rpx; /* 增大尺寸 */
+  background-color: #ff3b30;
+  border-radius: 20rpx; /* 完全圆形 */
+  color: #fff;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12rpx;
+}

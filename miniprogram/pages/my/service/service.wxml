@@ -1,0 +1,5 @@
+<view class="container">
+  <text>欢迎进入联系客服页面</text>
+  <!-- 你也可以在这里自定义客服的页面内容 -->
+  <button bindtap="handleContactService">联系客服</button>
+</view>

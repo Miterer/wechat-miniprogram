@@ -1,33 +1,38 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/category/category",
     "pages/message/message",
     "pages/sell/sell",
     "pages/my/my",
+    "pages/my/publish/publish",
+    "pages/my/sell/sell",
+    "pages/my/buy/buy",
+    "pages/my/favorites/favorites",
+    "pages/my/service/service",
+    "pages/my/about/about",
+    "pages/my/settings/settings",
     "pages/cart/cart",
     "pages/review/review",
     "pages/goods/list/list",
     "pages/goods/detail/detail",
-    "pages/myorder/detail/detail",
-    "pages/myorder/list/list",
-    "pages/mysell/detail/detail",
-    "pages/mysell/list/list",
-    "pages/address/add/index",
-    "pages/address/list/index",
+    "pages/search/search",
+    "pages/address/add/add",
+    "pages/address/list/list",
     "pages/login/login",
     "pages/settings/settings",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/index/entrance/entrance",
+    "pages/index/banner/banner"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FFD700",
-    "navigationBarTitleText": "校园百宝集",
+    "navigationBarTitleText": "校园旧宝集",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#252933",
-    "selectedColor": "#FFD700",
+    "selectedColor": "#252933",
     "backgroundColor": "#ffffff",
     "borderStyle": "black",
     "list": [
@@ -38,16 +43,16 @@
         "selectedIconPath": "assets/tabbar/index-active.png"
       },
       {
-        "pagePath": "pages/category/category",
-        "text": "分类",
-        "iconPath": "assets/tabbar/cate.png",
-        "selectedIconPath": "assets/tabbar/cate-active.png"
+        "pagePath": "pages/sell/sell",
+        "text": "出闲置",
+        "iconPath": "assets/tabbar/sell.png",
+        "selectedIconPath": "assets/tabbar/sell-active.png"
       },
       {
-        "pagePath": "pages/cart/cart",
-        "text": "购物车",
-        "iconPath": "assets/tabbar/cart.png",
-        "selectedIconPath": "assets/tabbar/cart-active.png"
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "assets/tabbar/message.png",
+        "selectedIconPath": "assets/tabbar/message-active.png"
       },
       {
         "pagePath": "pages/my/my",

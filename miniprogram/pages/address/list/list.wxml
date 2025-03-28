@@ -1,0 +1,25 @@
+<view class="address-container">
+  <!-- 页面标题 -->
+  <view class="page-title">
+    <text class="title">收货地址</text>
+  </view>
+
+  <!-- 如果没有收货地址，显示提示 -->
+  <view wx:if="{{addressList.length === 0}}" class="no-address">
+    <text>您还没有收货地址</text>
+  </view>
+
+  <!-- 地址列表 -->
+  <view wx:for="{{addressList}}" wx:key="id" class="address-item">
+    <view class="address-details">
+      <text class="address-name">{{item.name}}</text>
+      <text class="address-phone">{{item.phone}}</text>
+      <text class="address-location">{{item.address}}</text>
+    </view>
+  </view>
+
+  <!-- 添加地址按钮 -->
+  <view class="add-address-btn" bindtap="navigateToAddAddress">
+    <text>+ 添加收货地址</text>
+  </view>
+</view>

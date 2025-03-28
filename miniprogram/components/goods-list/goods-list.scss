@@ -1,0 +1,44 @@
+.goods-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.goods-item {
+  width: 48%;  /* 设置商品宽度为48%，每行两列 */
+  background-color: #fff;
+  padding: 16rpx;
+  margin-bottom: 20rpx;
+  border-radius: 12rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.goods-img {
+  width: 100%;
+  height: 250rpx;  /* 增大图片的高度 */
+  object-fit: cover;  /* 保持图片的比例并填充容器 */
+  border-radius: 12rpx;
+}
+
+.goods-info {
+  margin-top: 10rpx;
+}
+
+.goods-name {
+  font-size: 32rpx;  /* 增大商品名称字体 */
+  color: #333;
+  font-weight: bold;
+}
+
+.goods-price {
+  font-size: 28rpx;  /* 增大商品价格字体 */
+  color: #f3514f;
+  margin-top: 6rpx;
+}
+
+.goods-category {
+  font-size: 26rpx;  /* 增大商品类别字体 */
+  color: #71797f;
+  margin-top: 6rpx;
+}

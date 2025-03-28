@@ -1,0 +1,21 @@
+<view class="about-container">
+  <!-- 标题 -->
+  <view class="page-title">
+    <text class="title">{{title}}</text>
+  </view>
+
+  <!-- 内容 -->
+  <view class="content">
+    <text class="content-text">{{content}}</text>
+  </view>
+
+  <!-- 联系信息 -->
+  <view class="contact-info">
+    <text class="contact-text">{{contactInfo}}</text>
+  </view>
+
+  <!-- 应用版本 -->
+  <view class="version-info">
+    <text class="version-text">{{version}}</text>
+  </view>
+</view>
