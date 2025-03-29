@@ -1,48 +1,121 @@
-.detail-container {
+/* pages/goods/detail/detail.wxss */
+.container {
+  height: calc(100vh - 100rpx);
+  padding-bottom: 100rpx;
+}
+
+/* 顶部发布者信息 */
+.header {
+  display: flex;
   padding: 20rpx;
-  background-color: #fff;
+  align-items: center;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.user-info {
+  margin-left: 20rpx;
+}
+.nickname {
+  font-weight: bold;
+  display: block;
+}
+.meta {
+  color: #999;
+  font-size: 24rpx;
 }
 
-.goods-img {
+/* 商品图片 */
+.swiper {
+  height: 500rpx;
+}
+.product-image {
   width: 100%;
-  height: 300rpx;
-  border-radius: 8rpx;
 }
 
-.goods-info {
-  margin-top: 20rpx;
+/* 商品信息 */
+.detail-section {
+  padding: 30rpx;
 }
-
-.goods-name {
-  font-size: 30rpx;
+.price-row {
+  display: flex;
+  align-items: baseline;
+}
+.price {
+  color: #f40;
+  font-size: 40rpx;
   font-weight: bold;
 }
-
-.price-section {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10rpx;
-}
-
-.price {
-  font-size: 32rpx;
-  color: #f3514f;
-}
-
 .original-price {
-  font-size: 24rpx;
-  color: #71797f;
+  color: #999;
   text-decoration: line-through;
+  margin-left: 20rpx;
 }
-
-.goods-description {
-  margin-top: 20rpx;
-  font-size: 26rpx;
-  color: #333;
+.tag {
+  background: #ffeceb;
+  color: #f40;
+  padding: 0 10rpx;
+  margin-left: 20rpx;
+  border-radius: 4rpx;
 }
-
-.interaction-section {
-  margin-top: 30rpx;
+.title {
+  font-size: 32rpx;
+  margin: 20rpx 0;
+  display: block;
+}
+.stats {
+  color: #999;
   font-size: 24rpx;
-  color: #71797f;
+}
+.specs {
+  margin: 30rpx 0;
+  border-top: 1rpx solid #f5f5f5;
+  border-bottom: 1rpx solid #f5f5f5;
+  padding: 20rpx 0;
+}
+.spec-item {
+  display: flex;
+  margin: 15rpx 0;
+}
+.spec-label {
+  color: #999;
+  width: 150rpx;
+}
+.description {
+  line-height: 1.6;
+}
+
+/* 底部工具栏 */
+.toolbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  background: #fff;
+  border-top: 1rpx solid #f5f5f5;
+}
+.btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  padding: 0;
+}
+.btn image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.btn text {
+  font-size: 24rpx;
+  margin-top: 6rpx;
+}
+.want {
+  background: #f40;
+  color: white;
 }

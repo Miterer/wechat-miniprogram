@@ -11,7 +11,8 @@ App({
         imageUrl: "/assets/images/phone_xiaomi14ultra.jpg",
         viewCount: 1024,
         wishCount: 230,
-        timeStamp: 1615287342000
+        timeStamp: 1615287342000,
+        publisherId: "user666"
       },
       {
         id: 2,
@@ -23,7 +24,8 @@ App({
         imageUrl: "/assets/images/book_zhangyu18.jpg",
         viewCount: 789,
         wishCount: 120,
-        timeStamp: 1615288342000
+        timeStamp: 1615288342000,
+        publisherId: "user666"
       },
       {
         id: 3,
@@ -35,7 +37,8 @@ App({
         imageUrl: "/assets/images/lamp_mijia2lite.jpg",
         viewCount: 333,
         wishCount: 122,
-        timeStamp: 1743171259726
+        timeStamp: 1743171259726,
+        publisherId: "user666"
       },
       {
         id: 4,
@@ -47,9 +50,17 @@ App({
         imageUrl: "/assets/images/bag_YSL_CASSANDRE_ENVELOPE.jpeg",
         viewCount: 1000,
         wishCount: 99,
-        timeStamp: 1743172145748
+        timeStamp: 1743172145748,
+        publisherId: "user666"
       }
-    ]
+    ],
+    userInfo: {
+      "user666": {
+        avatar: "/assets/avatars/user666.jpg",
+        nickname: "AAA数码哥全国可飞",
+        location: "长春"
+      }
+    }
   },
   
   onLaunch() {

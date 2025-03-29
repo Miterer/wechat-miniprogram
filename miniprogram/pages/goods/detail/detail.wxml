@@ -1,18 +1,62 @@
-<view class="detail-container">
-  <image class="goods-img" src="{{goodsItem.imageUrl}}" mode="widthFix" />
+<!-- pages/goods/detail/detail.wxml -->
+<scroll-view scroll-y class="container">
+  <!-- 顶部发布者信息 -->
+  <view class="header">
+    <image class="avatar" src="{{publisherInfo.avatar}}"/>
+    <view class="user-info">
+      <text class="nickname">{{publisherInfo.nickname}}</text>
+      <text class="meta">{{goodsItem.formattedTime}} · {{publisherInfo.location}}</text>
+    </view>
+  </view>
 
-  <view class="goods-info">
-    <text class="goods-name">{{goodsItem.name}}</text>
-    <view class="price-section">
+  <!-- 商品图片轮播 -->
+  <swiper class="swiper" indicator-dots>
+    <swiper-item wx:for="{{goodsItem.images}}" wx:key="*this">
+      <image src="{{item}}" mode="widthFix" class="product-image"/>
+    </swiper-item>
+  </swiper>
+
+  <!-- 商品详情 -->
+  <view class="detail-section">
+    <view class="price-row">
       <text class="price">¥{{goodsItem.marketPrice}}</text>
       <text class="original-price" wx:if="{{goodsItem.originalPrice}}">¥{{goodsItem.originalPrice}}</text>
+      <!-- <text class="tag">包邮</text> -->
     </view>
-    <text class="goods-description">{{goodsItem.description}}</text>
-  </view>
+    
+    <text class="title">{{goodsItem.name}}</text>
+    <!-- <text class="condition">99新</text> -->
+    
+    <view class="stats">
+      <text>{{goodsItem.wishCount}}人想要</text>
+      <text>{{goodsItem.viewCount}}浏览</text>
+    </view>
 
-  <!-- 商品互动 -->
-  <view class="interaction-section">
-    <text>浏览量: {{goodsItem.viewCount}}</text>
-    <text>想要人数: {{goodsItem.wishCount}}</text>
+    <view class="specs">
+      <view wx:for="{{specifications}}" wx:key="label" class="spec-item">
+        <text class="spec-label">{{item.label}}：</text>
+        <text class="spec-value">{{item.value}}</text>
+      </view>
+    </view>
+
+    <view class="description">
+      {{goodsItem.description}}
+    </view>
   </view>
+</scroll-view>
+
+<!-- 底部固定工具栏 -->
+<view class="toolbar">
+  <button class="btn favorite" bindtap="toggleFavorite">
+    <image src="{{isFavorite ? '/assets/images/fav-filled.png' : '/assets/images/fav-empty.png'}}"/>
+    <text>收藏</text>
+  </button>
+  <button class="btn share" open-type="share">
+    <image src="/assets/images/wechat.png"/>
+    <text>分享</text>
+  </button>
+  <button class="btn want" bindtap="navigateToMessage">
+    <image src="/assets/images/message.png"/>
+    <text>我想要</text>
+  </button>
 </view>
