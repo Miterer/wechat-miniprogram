@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/banner/banner",
     "pages/message/message",
     "pages/sell/sell",
     "pages/my/my",
@@ -12,17 +13,15 @@
     "pages/my/about/about",
     "pages/my/settings/settings",
     "pages/cart/cart",
+    "pages/category/category",
     "pages/review/review",
-    "pages/goods/list/list",
     "pages/goods/detail/detail",
     "pages/search/search",
     "pages/address/add/add",
     "pages/address/list/list",
     "pages/login/login",
     "pages/settings/settings",
-    "pages/profile/profile",
-    "pages/index/entrance/entrance",
-    "pages/index/banner/banner"
+    "pages/profile/profile"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -3,8 +3,8 @@ Page({
     // 用户信息
     user: {
       avatar: "/assets/images/avatar-default.png", // 默认头像
-      name: "admin",
-      account: "666666"
+      name: "未登录",
+      account: "点击登录"
     },
 
     // 顶部的三个菜单
@@ -70,6 +70,26 @@ Page({
   onLoad() {
     // 这里可以请求后端接口，获取最新的用户信息
     // wx.request(...) => setData({ user: {...} })
+    const userInfo = wx.getStorageSync('userInfo')
+    if (userInfo) {
+      this.setData({
+        user: {
+          avatar: userInfo.avatarUrl || "/assets/images/avatar-default.png",
+          name: userInfo.nickName || "微信用户",
+          account: userInfo.account || "已登录"
+        }
+      })
+    }
+  },
+  
+  // 点击用户信息区域跳转到登录页
+  navigateToLogin() {
+    const userInfo = wx.getStorageSync('userInfo')
+    if (!userInfo) {
+      wx.navigateTo({
+        url: '/pages/login/login'
+      })
+    }
   },
 
   // 点击任意菜单项时跳转

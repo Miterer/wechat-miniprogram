@@ -1,5 +1,5 @@
 <view class="detail-container">
-  <image class="goods-img" src="{{goodsItem.imageUrl}}" mode="aspectFill" />
+  <image class="goods-img" src="{{goodsItem.imageUrl}}" mode="widthFix" />
 
   <view class="goods-info">
     <text class="goods-name">{{goodsItem.name}}</text>

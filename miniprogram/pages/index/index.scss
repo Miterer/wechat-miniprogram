@@ -1,20 +1,33 @@
-/* 自定义导航栏 */
-.custom-navbar {
-  height: 88rpx;
-  padding: 0 32rpx;
+/* 顶部安全区域 - 适配刘海屏 */
+.safe-area {
+  height: env(safe-area-inset-top);
+  height: var(--status-bar-height);
+  width: 100%;
+  background: #FFD700;
+}
+
+/* 合并的头部容器 */
+.header-container {
   display: flex;
   align-items: center;
-  background: #FFD700; /* 黄色背景 */
-  width: 100%; /* 让导航栏占满屏幕宽度 */
-  box-sizing: border-box; /* 防止外边距影响布局 */
+  padding: 20rpx 32rpx;
+  background: #FFD700;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 标题样式 */
+.navbar-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-right: 32rpx;
+  white-space: nowrap;
 }
 
 /* 搜索框容器 */
 .search-container {
-  padding: 20rpx 32rpx;
-  background: #FFD700; /* 保持黄色背景 */
-  width: 100%;  /* 占满屏幕宽度 */
-  box-sizing: border-box;
+  flex: 1;
 }
 
 .search-box {
@@ -35,4 +48,42 @@
 .search-placeholder {
   font-size: 28rpx;
   color: #999;
+}
+
+/* 页面容器 */
+.container {
+  background-color: #f8f8f8;
+  padding-bottom: 20rpx;
+}
+/* 分类导航 */
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20rpx;
+  background-color: #FFD700; /* 主题色 */
+  border-radius: 18rpx;
+}
+
+.nav-item {
+  width: 22%;
+  /* 添加下面这行，让内容垂直排列且居中 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx;
+}
+
+.nav-img {
+  width: 66rpx;
+  height: 66rpx;
+}
+
+.nav-text {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #333;
+  /* 居中对齐 */
+  text-align: center;
 }

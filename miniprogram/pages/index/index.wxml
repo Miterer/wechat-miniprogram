@@ -1,22 +1,28 @@
-<!-- 自定义导航栏 -->
-<view class="custom-navbar">
-  <text class="navbar-title">校园旧宝集</text>
-</view>
+<!-- 顶部安全区域占位 -->
+<view class="safe-area"></view>
 
-<!-- 搜索框 -->
-<view class="search-container" bindtap="navigateToSearch">
-  <view class="search-box">
-    <image class="search-icon" src="/assets/images/search.png" />
-    <text class="search-placeholder">搜索商品名称</text>
+<!-- 合并的标题和搜索框 -->
+<view class="header-container">
+  <text class="navbar-title">校园旧宝集</text>
+  <view class="search-container" bindtap="navigateToSearch">
+    <view class="search-box">
+      <image class="search-icon" src="/assets/images/search.png" />
+      <text class="search-placeholder">搜索商品名称</text>
+    </view>
   </view>
 </view>
 
+<!-- 页面内容 -->
 <view class="container">
-  <!-- 轮播图 -->
   <banner bannerList="{{bannerList}}" />
 
   <!-- 分类导航 -->
-  <entrance cateList="{{categoryList}}" />
+  <view class="nav-list">
+    <view wx:for="{{categoryList}}" wx:key="id" class="nav-item" data-type="{{item.type}}" bindtap="navigateToCategory">
+      <image class="nav-img" src="{{item.icon}}" />
+      <text class="nav-text">{{item.name}}</text>
+    </view>
+  </view>
 
   <!-- 商品列表 -->
   <goods-list goodsList="{{goodsList}}" title="最新发布" />

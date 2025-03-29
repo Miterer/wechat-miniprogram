@@ -1,7 +1,7 @@
 Page({
   data: {
     userInfo: {
-      avatarUrl: '/assets/images/default-avatar.png',  // 默认头像
+      avatarUrl: '/assets/images/avatar-default.png',  // 默认头像
       nickname: '用户昵称',
       username: '用户123',
       description: '这里是个人简介'
@@ -46,19 +46,33 @@ Page({
   },
 
   // 点击退出登录
-  handleLogout() {
-    wx.showModal({
-      title: '确认退出',
-      content: '您确定要退出登录吗？',
-      success: (res) => {
-        if (res.confirm) {
-          // 实际应用中可以调用退出登录的接口
-          wx.showToast({
-            title: '退出成功',
-            icon: 'success'
-          });
-        }
+handleLogout() {
+  wx.showModal({
+    title: '确认退出',
+    content: '您确定要退出登录吗？',
+    success: (res) => {
+      if (res.confirm) {
+        // 清除本地用户数据
+        wx.removeStorageSync('userInfo');
+        // 清除全局用户数据
+        getApp().globalData.userInfo = null;
+        
+        // 显示退出成功提示
+        wx.showToast({
+          title: '退出成功',
+          icon: 'success',
+          duration: 1500,
+          complete: () => {
+            // 提示显示完成后跳转回个人中心
+            setTimeout(() => {
+              wx.reLaunch({
+                url: '/pages/my/my'
+              });
+            }, 1500);
+          }
+        });
       }
-    });
-  }
+    }
+  });
+}
 });

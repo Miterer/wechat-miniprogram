@@ -1,31 +1,33 @@
-<!-- 搜索框 -->
-<view class="search-header">
-  <!-- 返回按钮，点击返回上一页面 -->
-  <image class="back-icon" src="/assets/images/arrow-left.png" bindtap="navigateBack" />
-
-  <view class="search-input">
-    <!-- 搜索图标 -->
-    <image class="search-icon" src="/assets/images/search.png" />
-    <input
-      class="input"
-      placeholder="搜索商品名称"
-      placeholder-class="placeholder"
-      bindinput="onSearchInput"
-    />
-  </view>
-</view>
-
-<!-- 搜索结果列表 -->
-<scroll-view class="search-result" scroll-y>
-  <block wx:for="{{searchResults}}" wx:key="id">
-    <navigator url="/pages/goods/detail/detail?goodsId={{item.id}}">
-      <view class="result-item">
-        <image class="item-image" src="{{item.imageUrl}}" />
-        <view class="item-info">
-          <text class="item-name">{{item.name}}</text>
-          <text class="item-price">¥{{item.marketPrice}}</text>
-        </view>
-      </view>
-    </navigator>
-  </block>
-</scroll-view>
+<!-- 搜索框 --> 
+<view class="search-header"> 
+  <!-- 返回按钮，点击返回上一页面 --> 
+  <image class="back-icon" src="/assets/images/arrow-left.png" bindtap="navigateBack" /> 
+ 
+  <view class="search-input"> 
+    <!-- 搜索图标 --> 
+    <image class="search-icon" src="/assets/images/search.png" /> 
+    <input 
+      class="input" 
+      placeholder="搜索商品名称" 
+      placeholder-class="placeholder" 
+      bindinput="onSearchInput" 
+      confirm-type="search"  
+      bindconfirm="onSearchConfirm"
+    /> 
+  </view> 
+</view> 
+ 
+<!-- 搜索结果列表 --> 
+<scroll-view class="search-result" scroll-y> 
+  <block wx:for="{{searchResults}}" wx:key="id"> 
+    <navigator url="/pages/goods/detail/detail?goodsId={{item.id}}"> 
+      <view class="result-item"> 
+        <image class="item-image" src="{{item.imageUrl}}" /> 
+        <view class="item-info"> 
+          <text class="item-name">{{item.name}}</text> 
+          <text class="item-price">¥{{item.marketPrice}}</text> 
+        </view> 
+      </view> 
+    </navigator> 
+  </block> 
+</scroll-view> 

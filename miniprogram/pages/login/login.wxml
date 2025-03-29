@@ -1,2 +1,26 @@
-<!--pages/login/login.wxml-->
-<text>pages/login/login.wxml</text>
+<view class="login-container">
+  <!-- 返回按钮 -->
+  <view class="back-btn" bindtap="navigateBack">
+    <image src="/assets/images/arrow-left.png" mode="aspectFit" class="back-icon"/>
+  </view>
+
+  <!-- 应用logo -->
+  <view class="logo-container">
+    <image class="app-logo" src="/assets/images/logo.png" mode="aspectFit" />
+  </view>
+  
+  <!-- 欢迎语 -->
+  <view class="welcome-text">欢迎来到校园旧宝集</view>
+  
+  <!-- 微信登录按钮 -->
+  <button class="login-btn wechat-btn" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">
+    <image class="login-icon" src="/assets/images/wechat.png" />
+    <text>微信一键登录</text>
+  </button>
+  
+  <!-- 手机号登录按钮 -->
+  <button class="login-btn phone-btn" bindtap="navigateToPhoneLogin">
+    <image class="login-icon" src="/assets/images/phone.png" />
+    <text>其他手机号登录</text>
+  </button>
+</view>

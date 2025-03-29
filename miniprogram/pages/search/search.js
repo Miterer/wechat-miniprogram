@@ -1,38 +1,43 @@
 Page({
   data: {
     searchResults: [],
-    allGoods: [] // 所有商品数据
+    allGoods: [],
+    searchKeyword: "" // 新增搜索关键词存储
   },
 
   onLoad() {
-    // 获取全局商品数据（需在主页加载后传递或从服务端获取）
     const app = getApp();
     this.setData({
-      allGoods: app.globalData.goodsList || []
+      allGoods: app.globalData.goodsList || [...你的默认数据]
     });
   },
 
-  // 输入时触发搜索
+  // 输入时实时搜索
   onSearchInput(e) {
-    const keyword = e.detail.value.trim();
-    if (!keyword) {
+    const keyword = e.detail.value;
+    this.setData({ searchKeyword: keyword });
+    this.searchGoods(keyword);
+  },
+
+  // 回车键触发
+  onSearchConfirm(e) {
+    this.searchGoods(e.detail.value);
+  },
+
+  // 封装搜索方法
+  searchGoods(keyword) {
+    if (!keyword.trim()) {
       this.setData({ searchResults: [] });
       return;
     }
 
-    // 匹配逻辑：完全匹配优先 > 部分匹配
     const results = this.data.allGoods
       .filter(item => item.name.includes(keyword))
-      .sort((a, b) => {
-        const aExact = a.name === keyword;
-        const bExact = b.name === keyword;
-        return bExact - aExact; // 完全匹配排前面
-      });
+      .sort((a, b) => b.name === keyword - a.name === keyword);
 
     this.setData({ searchResults: results });
   },
 
-  // 返回主页
   navigateBack() {
     wx.navigateBack();
   }

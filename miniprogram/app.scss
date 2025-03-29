@@ -4,6 +4,7 @@
 page {
   background-color: #f7f4f8;
   min-height: 100%;
+  --status-bar-height: 30px; /* 默认值 */
 }
 
 .container {

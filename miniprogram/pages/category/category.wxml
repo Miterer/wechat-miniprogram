@@ -1,0 +1,3 @@
+<view class="container">
+  <goods-list goodsList="{{goodsList}}" title="{{categoryType}}" />
+</view>
